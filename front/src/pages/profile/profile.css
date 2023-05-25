@@ -1,0 +1,21 @@
+.pContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pWrap{
+    width: 100%;
+    max-width: 1024px;
+    padding: 20px;
+}
+
+.pWrap h1{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+.profile{
+    overflow:hidden;
+}

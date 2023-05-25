@@ -1,0 +1,56 @@
+.uContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:50px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.uImage{
+    width:300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.uDesc{
+    display: flex;
+}
+
+.uCell{
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+.uInput{
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: #a4a4a4 1px solid;
+}
+
+.uText{
+    margin-bottom: 5px;
+}
+
+.uBtn{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uButton{
+    width: 50%;
+    background-color: rgba(171, 15, 15, 0.982);
+    color: white;
+    padding: 10px 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.uButton:hover{
+    background-color: rgb(127, 18, 18);
+}
+

@@ -1,0 +1,91 @@
+/* .navbar{
+  height: 50px;
+  background-color: #003580;
+  display: flex;
+  justify-content: center;
+}
+
+.navContainer{
+  width: 100%;
+  max-width: 1024px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo{
+  font-weight: 500;
+}
+
+.navButton{
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
+}*/
+
+.account{
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.navItems{
+  display: flex;
+  align-items: center;
+}
+.profilePic{
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 10px;
+  border: #f4f4f4 1.5px solid;
+} 
+
+.navbar{
+  height: 50px;
+  background-color: #706969;
+  color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.navContainer{
+  max-width: 1024px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.logo{
+  font-weight: 500;
+}
+
+.navButton{
+  width: 100px;
+  border: none;
+  padding: 17px;
+  /* background-color:rgba(196, 11, 11, 0.860);  */
+  background-color: rgb(171, 15, 15);
+  color: #f4f4f4;
+  cursor: pointer;
+}
+
+.navButton:hover{
+  background-color: rgb(136, 16, 16);
+}
+
+.open{
+  transform: translateX(0%);
+  transition: all 0.3s ease;
+}
+
+.close{
+  opacity:0;
+  transform: translateX(40%);
+}

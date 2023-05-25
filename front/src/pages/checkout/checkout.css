@@ -1,0 +1,109 @@
+.checkout{
+    overflow: hidden;
+}
+
+.wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cContainer{
+    width: 100%;
+    max-width: 1024px;
+    padding: 10px;
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+
+.left{
+    width: 40%;
+    padding: 20px;
+    border: #c4c4c4 1px solid;
+    border-radius: 5px;
+}
+
+.left h2{
+    margin: 20px 0;
+}
+
+.leftItem{
+    display: flex;
+    margin: 15px 0;
+    justify-content: space-between;
+}
+
+.cButton{
+    width: 100%;
+    background-color: rgba(171, 15, 15, 0.982);
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.cButton:hover{
+    background-color: rgb(127, 18, 18);
+}
+
+.right{
+    padding: 20px;
+    border: #c4c4c4 1px solid;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    /* width: 60%; */
+}
+
+.riImg{
+    width: 300px;
+    height: 300px;
+}
+
+.riTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.riTitle button{
+    background-color: rgb(171, 15, 15);
+    color: white;
+    padding: 5px;
+    font-weight: bold;
+    border: none;
+    margin-left: 5px;
+}
+
+.liOptions{
+    display: flex;
+    flex-direction: column;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.comment{
+    color: green;
+    font-size: 18px;
+}
+
+.riSubtitle{
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .riFeatures{
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .riCancelOp{
+    font-size: 14px;
+    color: #008009;
+    font-weight: 600;
+  }

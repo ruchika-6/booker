@@ -1,0 +1,37 @@
+.bookings{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.bContainer{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    padding: 10px 0;
+}
+
+.bItems{
+    border: #c4c4c4 1px solid;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px
+}
+
+.bDetails{
+    display: flex;
+    flex-direction: column;
+    gap:10px
+}
+
+.bTitle{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bImg{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
