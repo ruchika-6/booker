@@ -36,6 +36,9 @@ const UserSchema = new mongoose.Schema(
         },
         bookings:{
             type:[Object]
+        },
+        verified: {
+            type:Boolean
         }
     },
     {timestamps: true}

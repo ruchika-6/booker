@@ -1,23 +1,26 @@
 import express from "express";
 import Razorpay from "razorpay"
 import { verifyToken} from "../utils/verifyToken.js";
+import shortid from "shortid"
+import crypto from "crypto"
+import 'dotenv/config'
 
 const router = express.Router();
 
 const razorpay = new Razorpay({
-	key_id: 'rzp_test_mMCa9RkEASNIRF',
-	key_secret: 'X6NqKyF7Jxw9YXhFOetVLvKN'
+	key_id: "rzp_test_mMCa9RkEASNIRF",
+	key_secret: process.env.KEY_SECRET
 })
 
 router.post("/:price",async (req,res)=>{
     const payment_capture = 1;
-    const amount = 500;
+    const amount = req.params.price;
     const currency = "INR";
 
     const options = {
         amount: amount*100,
         currency: currency,
-        receipt:"soo17317jfpow",
+        receipt:shortid.generate(),
         payment_capture
     }
     try {

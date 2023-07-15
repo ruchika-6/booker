@@ -1,6 +1,8 @@
 import express from "express";
 import User from "../models/user.js"
 import { verifyToken, verifyAdmin } from "../utils/verifyToken.js";
+import nodemailer from "nodemailer"
+import transporter from "../controllers/mailTransporter.js"
 
 const router = express.Router();
 
@@ -11,6 +13,8 @@ const router = express.Router();
 // router.get("/checkadmin", verifyAdmin,(req,res,next)=>{
 //     res.send("You are logged in and You can delete all accounts");
 // })
+
+
 //CREATE
 router.post("/",async (req,res)=>{
 
@@ -42,6 +46,21 @@ router.put("/:id",verifyToken, async (req,res)=>{
 router.put("/bookings/:id",verifyToken, async (req,res)=>{
     try{
         const updatedUser = await User.findByIdAndUpdate(req.params.id, {$push: {"bookings":req.body.bookings}}, {new: true});
+        const {email} = req.body;
+
+        var mailOptions = {
+            from: "ruchikachakraborty6@gmail.com",
+            to: email,
+            subject: "Booking Confirmation",
+            text: `Your booking for ${req.body.bookings.name} has been confirmed`
+        }
+
+        transporter.sendMail(mailOptions,(error,info)=>{
+            if(error)
+                console.log(error);
+            else
+                console.log("Email Sent Successfully");
+        })
         res.status(200).send(updatedUser);
     }
     catch(err){

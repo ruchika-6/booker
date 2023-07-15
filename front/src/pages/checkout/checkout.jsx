@@ -43,7 +43,8 @@ const Checkout = () => {
             city:item.city,
             photo:item.photos[0],
             price:state.price*state.days
-        }
+        },
+        email:user.email
     }
 
     const updateUser = async () =>{
@@ -86,10 +87,7 @@ const Checkout = () => {
 			return
 		}
 
-		const data = axios.post(`/razorpay/${state.price*state.days}`);
-        // const data = await fetch('http://localhost:8000/api/razorpay', { method: 'POST' }).then((t) =>
-		// 	t.json()
-		// )
+		const data = await axios.post(`/razorpay/${state.price*state.days}`);
 
 		console.log(data)
 

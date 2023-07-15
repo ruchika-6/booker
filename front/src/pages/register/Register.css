@@ -1,0 +1,9 @@
+.otpInput{
+    padding: 10px;
+    margin:10px 5px;
+    outline-color: rgba(171, 15, 15, 0.982);;
+}
+
+.lContainer>p{
+    font-size: 20px;
+}

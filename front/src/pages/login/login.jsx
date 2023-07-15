@@ -37,6 +37,7 @@ const Login = ()=>{
                 <input type="email" className="lInput" onChange={handleChange} id="email" placeholder="Email"/>
                 <input type="password" className="lInput" onChange={handleChange} id="password" placeholder="Password"/>
                 <button disabled={loading} onClick={handleClick} className="lButton">Login</button>
+                {/* <span style={{fontSize:"12px", cursor:"pointer", color:"red", marginBottom:"10px"}}>Forgot Password?</span> */}
                 {error &&
                     <span className="error">{error}</span>
                 }
