@@ -3,6 +3,9 @@ import User from "../models/user.js"
 import { verifyToken, verifyAdmin } from "../utils/verifyToken.js";
 import nodemailer from "nodemailer"
 import transporter from "../controllers/mailTransporter.js"
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const router = express.Router();
 
@@ -42,14 +45,14 @@ router.put("/:id",verifyToken, async (req,res)=>{
     }
 });
 
-//UPDATE
+//Book Hotel
 router.put("/bookings/:id",verifyToken, async (req,res)=>{
     try{
         const updatedUser = await User.findByIdAndUpdate(req.params.id, {$push: {"bookings":req.body.bookings}}, {new: true});
         const {email} = req.body;
 
         var mailOptions = {
-            from: "ruchikachakraborty6@gmail.com",
+            from: process.env.EMAIL,
             to: email,
             subject: "Booking Confirmation",
             text: `Your booking for ${req.body.bookings.name} has been confirmed`

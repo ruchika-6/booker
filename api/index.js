@@ -7,11 +7,15 @@ import UserRoute from "./routes/users.js";
 import SubscriberRoute from "./routes/subscriber.js";
 import RazorPay from "./routes/razorpay.js";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+import path from "path"
+
+dotenv.config();
 
 const app = express();
 async function connect(){
     try{
-        mongoose.connect('mongodb://localhost:27017/db');
+        mongoose.connect(process.env.MONGODB_URI);
         console.log("Mongodb connected...");
     }catch(error)
     {
@@ -37,6 +41,16 @@ app.use("/api/rooms", RoomsRoute);
 app.use("/api/subscribe", SubscriberRoute);
 app.use("/api/razorpay", RazorPay);
 
+// --------------------------deployment------------------------------
+
+const __dirname1 = path.resolve();
+app.use(express.static(path.join(__dirname1, "/front/build")));
+
+app.get("*", (req, res) =>
+res.sendFile(path.resolve(__dirname1, "front", "build", "index.html"))
+);
+
+// --------------------------deployment------------------------------
 
 //ERROR HANDLING MIDDLEWARE
 app.use((err,req,res,next)=>{

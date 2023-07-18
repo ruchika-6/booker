@@ -79,7 +79,7 @@ const Hotel = () => {
           <div className="slider">
             <FontAwesomeIcon
               icon={faCircleXmark}
-              className="close"
+              className="X"
               onClick={() => setOpen(false)}
             />
             <FontAwesomeIcon

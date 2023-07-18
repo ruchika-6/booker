@@ -51,7 +51,7 @@ const Checkout = () => {
 
         try {
             await Promise.all(selectedRooms.map((roomId)=>{
-                const res = axios.put(`/rooms/availability/${roomId}`,
+                const res = axios.put(`/api/rooms/availability/${roomId}`,
                 {dates:allDates,
                 });
                 return res.data
@@ -59,7 +59,7 @@ const Checkout = () => {
             );
 
             try {
-                const res = await axios.put(`/users/bookings/${user._id}`, toSend)
+                const res = await axios.put(`/api/users/bookings/${user._id}`, toSend)
                 dispatch({type:"LOGIN_SUCCESS", payload:res.data});
                 setOpen(true);
             } catch (error) {
@@ -87,7 +87,7 @@ const Checkout = () => {
 			return
 		}
 
-		const data = await axios.post(`/razorpay/${state.price*state.days}`);
+		const data = await axios.post(`/api/razorpay/${state.price*state.days}`);
 
 		console.log(data)
 

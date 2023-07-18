@@ -37,7 +37,7 @@ const Update = () => {
                 };
             }
 
-            const res = await axios.put(`/users/${user._id}`,newUser)
+            const res = await axios.put(`/api/users/${user._id}`,newUser)
             console.log(res.data);
             dispatch({type:"LOGIN_SUCCESS", payload:res.data})
             alert("Updated Successfully");

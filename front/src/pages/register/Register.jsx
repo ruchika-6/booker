@@ -49,7 +49,7 @@ const Register = ()=>{
                 };
             }
 
-            const {data} = await axios.post("/auth/register",newUser)
+            const {data} = await axios.post("/api/auth/register",newUser)
             setData(data);
             setOpenOtp(true);
         }catch(err){
@@ -59,7 +59,7 @@ const Register = ()=>{
 
     const resendOtp = async ()=>{
         try {
-            const res = await axios.post("/auth/resendOtp",data.data)
+            const res = await axios.post("/api/auth/resendOtp",data.data)
             setData(res.data);
         } catch (error) {
             console.log(error)
@@ -73,11 +73,11 @@ const Register = ()=>{
         }
 
         try{
-            await axios.post("/auth/verifyOtp",otpInfo)
+            await axios.post("/api/auth/verifyOtp",otpInfo)
             let newUser = {
                 ...credentials,
             };
-            const res = await axios.post("/auth/login",newUser)
+            const res = await axios.post("/api/auth/login",newUser)
             dispatch({type:"LOGIN_SUCCESS", payload:res.data.details})
             navigate("/");
         }
@@ -132,7 +132,7 @@ const Register = ()=>{
                                 email: data.email,
                                 img: data.picture,
                             };
-                                const res = await axios.post("/auth/google",newUser)
+                                const res = await axios.post("/api/auth/google",newUser)
                                 dispatch({type:"LOGIN_SUCCESS", payload:res.data.details})
                                 navigate("/");  
                         }}

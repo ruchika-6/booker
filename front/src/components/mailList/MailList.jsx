@@ -24,7 +24,7 @@ const MailList = () => {
         setOpen(true);
         return;
       }
-      const res = await axios.post("/subscribe",emails)
+      const res = await axios.post("/api/subscribe",emails)
       setText("Thank You for Subscribing!");
       setOpen(true);
     }catch(err){

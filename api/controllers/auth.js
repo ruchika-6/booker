@@ -3,7 +3,9 @@ import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
 import transporter from "./mailTransporter.js"
 import otpVerify from "../models/otpVerify.js"
-import 'dotenv/config'
+import dotenv from "dotenv"
+
+dotenv.config();
 
 const sendOtpVerificationEmail = async ({_id,email},res)=>{
     const otp = `${Math.floor(1000 + Math.random() * 9000)}`;
