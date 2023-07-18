@@ -1,8 +1,6 @@
 # booker
 This is a Hotel Booking website to make travelling easy, built using the MERN stack. This website allows users to Search for Hotels according to their destination and requirements and reserve rooms, after paying the reservation charges. The Admin can manage the website and create, update and delete hotels and rooms.
 
-Client Side Live Demo: https://booker-hjex.onrender.com
-
 Client:
 
 Key Features:
