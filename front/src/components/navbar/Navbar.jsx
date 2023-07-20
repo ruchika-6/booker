@@ -35,8 +35,8 @@ const Navbar = () => {
               {
                 // open && 
                 <div className={open? "open" : "close"}>
-                    <button onClick={()=>navigate("/profile",{state:{bookings:false}})} className="navButton">Profile</button>
-                    <button onClick={()=>navigate("/profile",{state:{bookings:true}})} className="navButton">Bookings</button>
+                    <button disabled={!open} onClick={()=>navigate("/profile",{state:{bookings:false}})} className="navButton">Profile</button>
+                    <button disabled={!open} onClick={()=>navigate("/profile",{state:{bookings:true}})} className="navButton">Bookings</button>
                 </div>
               }
               <button onClick={handleLogout} className="navButton">Logout</button>

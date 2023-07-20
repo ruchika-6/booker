@@ -47,3 +47,13 @@
 .fpRating>span{
   font-size: 14px;
 }
+
+@media only screen and (max-width: 600px){
+  .fp {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

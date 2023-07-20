@@ -51,6 +51,8 @@
   display: flex;
   justify-content: center;
   opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
 }
 
 .navContainer{
@@ -91,4 +93,19 @@
   position: absolute;
   top: 10px;
   right: 10px;
+}
+
+@media only screen and (max-width: 600px){
+  .open{
+    position: absolute;
+    top:52px;
+    right:0px;
+    z-index: 2;
+  }
+  
+  .close{
+    opacity:0;
+    transition: all 0.3s ease;
+    z-index: 0;
+  }
 }

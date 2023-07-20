@@ -57,3 +57,13 @@
   left:20px */
   margin-top: 10px;
 }
+
+@media only screen and (max-width: 600px){
+  .pList{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+  }
+}

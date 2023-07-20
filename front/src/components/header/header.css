@@ -200,8 +200,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  position: relative;
   cursor: pointer;
+  position: relative;
 }
 
 .headerSearchInput{
@@ -222,14 +222,15 @@
 
 .date{
   position: absolute;
-  top:25px;
+  top:36px;
   left: 0px;
   z-index: 2;
+  overflow-y: hidden;
 }
 
 .options{
   position: absolute;
-  top:25px;
+  top:40px;
   left: 0px;
   background: #f4f4f4;
   color: #706969;
@@ -262,4 +263,30 @@
   border-color: rgba(171, 15, 15, 0.555);
   font-size: 0.7rem;
   color: black;
+}
+
+@media only screen and (max-width: 600px){
+  .headerList{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .headerSearch{
+    height: 200px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    padding: 7px;
+    margin-top: 30px;
+    border-radius: 5px;
+  }
+  .date{
+    position: absolute;
+    top:36px;
+    left: -61px;
+    z-index: 2;
+    overflow-y: hidden;
+  }
 }

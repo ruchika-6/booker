@@ -8,11 +8,11 @@
 }
 
 .homeTitle{
-  width: 95vw;
+  width: 100vw;
   max-width: 1024px;
   font-size: 20px;
 }
 
 .home{
-  overflow: hidden;
+  width: 100%;
 }
