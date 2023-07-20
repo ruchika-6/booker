@@ -43,12 +43,12 @@ app.use("/api/razorpay", RazorPay);
 
 // --------------------------deployment------------------------------
 
-// const __dirname1 = path.resolve();
-// app.use(express.static(path.join(__dirname1, "/front/build")));
+const __dirname1 = path.resolve();
+app.use(express.static(path.join(__dirname1, "/front/build")));
 
-// app.get("*", (req, res) =>
-// res.sendFile(path.resolve(__dirname1, "front", "build", "index.html"))
-// );
+app.get("*", (req, res) =>
+res.sendFile(path.resolve(__dirname1, "front", "build", "index.html"))
+);
 
 // --------------------------deployment------------------------------
 
