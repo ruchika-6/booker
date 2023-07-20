@@ -34,6 +34,7 @@
 .navItems{
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .profilePic{
   width: 35px;
@@ -100,12 +101,15 @@
     position: absolute;
     top:52px;
     right:0px;
-    z-index: 2;
+    /* transition: all 0.3s ease; */
   }
   
   .close{
     opacity:0;
+    top:52px;
+    right:100px;
     transition: all 0.3s ease;
-    z-index: 0;
+    z-index: -1;
+    visibility: hidden;
   }
 }

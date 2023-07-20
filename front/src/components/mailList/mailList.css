@@ -7,7 +7,16 @@
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px 0px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+.mailInputContainer{
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .mailInputContainer>input{
@@ -15,7 +24,6 @@
   height: 30px;
   padding: 10px;
   border: none;
-  margin-right: 10px;
   border-radius: 5px;
   outline: none;
 }

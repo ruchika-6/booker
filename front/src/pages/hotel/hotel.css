@@ -136,7 +136,7 @@
 
 .sliderImg{
   width: 80%;
-  height: 80vh;
+  height: 80%;
 }
 
 .X{
@@ -163,6 +163,18 @@
   background-color: rgb(127, 18, 18);
 }
 
-/* .hotel{
-  overflow:hidden;
-} */
+@media only screen and (max-width: 600px){
+  .bookNow{
+    position: inherit;
+  }
+  .hotelDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .sliderImg{
+    width: 100%;
+    height: 50%;
+  }
+}

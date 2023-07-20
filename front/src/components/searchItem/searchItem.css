@@ -112,3 +112,27 @@
 .siCheckButton:hover{
   background-color: rgb(127, 18, 18);
 }
+
+@media only screen and (max-width: 600px){
+  .searchItem {
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  .siImg {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+  }
+  .siFeatures{
+    display: none;
+  }
+  .siCancelOpSubtitle{
+    display: none;
+  }
+}
