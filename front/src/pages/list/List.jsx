@@ -17,8 +17,8 @@ const List = () => {
   const [min, setMin] = useState(undefined);
   const [max, setMax] = useState(undefined);
 
-  // const {data,loading,error,reFetch} = useFetch(`/hotels?city=${destination}&min=${min || 0}&max=${max||99999}`)
-  const {data,loading,error,reFetch} = useFetch(`/hotels?city=${destination}`)
+  const {data,loading,error,reFetch} = useFetch(`/hotels?city=${destination}&min=${min || 0}&max=${max||99999}`)
+  // const {data,loading,error,reFetch} = useFetch(`/hotels?city=${destination}`)
 
   const handleClick = ()=>{
     reFetch();
@@ -34,7 +34,7 @@ const List = () => {
             <h1 className="lsTitle">Search</h1>
             <div className="lsItem">
               <label>Destination</label>
-              <input placeholder={destination} onChange={(e)=>setDestination(e.target.value)} type="text" />
+              <input placeholder={destination} onChange={(e)=>setDestination(e.target.value.toLocaleLowerCase())} type="text" />
             </div>
             <div className="lsItem">
               <label>Check-in Date</label>

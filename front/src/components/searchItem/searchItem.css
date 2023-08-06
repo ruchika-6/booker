@@ -129,10 +129,4 @@
     height: 100px;
     object-fit: cover;
   }
-  .siFeatures{
-    display: none;
-  }
-  .siCancelOpSubtitle{
-    display: none;
-  }
 }

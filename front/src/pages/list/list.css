@@ -109,3 +109,24 @@
 label{
   font-weight: 500;
 }
+
+/* @media only screen and (max-width: 600px){
+  .listWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .listSearch {
+    flex: 1;
+    background-color: #706969;
+    padding: 10px;
+    border-radius: 5px;
+    position: sticky;
+    top: 0px;
+    height: max-content;
+    height: 50%;
+  }
+} */

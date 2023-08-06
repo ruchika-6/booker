@@ -100,7 +100,7 @@ const Header = ({ type }) => {
                   type="text"
                   placeholder="Where are you going?"
                   className="headerSearchInput"
-                  onChange={(e) => setDestination(e.target.value)}
+                  onChange={(e) => setDestination(e.target.value.toLocaleLowerCase())}
                 />
               </div>
               <div className="headerSearchItem">
